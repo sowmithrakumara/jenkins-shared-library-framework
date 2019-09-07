@@ -3,13 +3,13 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Git Checkout') {
             steps {
-                gitCheckout(
+            gitCheckout(
                 branch: "master",
                 url: "https://github.com/spring-projects/spring-petclinic.git"
-                )
+            )
             }
-        }
+    }
     }
 }
