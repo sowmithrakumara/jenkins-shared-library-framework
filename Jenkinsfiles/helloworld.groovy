@@ -5,10 +5,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-            gitCheckout(
-                branch: "master",
-                url: "https://github.com/sowmithrakumara/jenkins-shared-library-framework.git"
-            )
+                echo "Hello World"
             }
     }
     }
