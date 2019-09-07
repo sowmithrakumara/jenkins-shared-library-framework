@@ -1,13 +1,16 @@
+    
+@Library('dcube-library@master') _
+
 pipeline {
     agent any
     stages {
-        stage('Git Checkout') {
+        stage('build') {
             steps {
-            gitCheckout(
+                gitCheckout(
                 branch: "master",
                 url: "https://github.com/spring-projects/spring-petclinic.git"
-            )
+                )
             }
-    }
+        }
     }
 }
