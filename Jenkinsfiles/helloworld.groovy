@@ -5,7 +5,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                HelloWorld 'testing'
+                gitCheckout(
+                branch: "master",
+                url: "https://github.com/spring-projects/spring-petclinic.git"
+                )
             }
         }
     }
